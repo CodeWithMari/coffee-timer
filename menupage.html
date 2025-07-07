@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Timer | Pomodoro App</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Coffee Timer <3</h1>
+            <div class="header-icons">
+                <img src="assets/minimize.png" alt="minimize" id="min-btn">
+                <img src="assets/close.png" alt="close" id="close-btn">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="menu">
+            <h2 class="menu-titulo">Which coffee are you going to time today?</h2>
+            <div class="options-container">
+                <div class="options">
+                    <div class="coffee-item">
+                        <div class="sprite-coffee-beans" onclick="selectTimer(10)"></div>
+                        <h3>10min</h3>
+                    </div>
+                    <div class="coffee-item">
+                        <div class="sprite-cup-coffee" onclick="selectTimer(30)"></div>
+                        <h3>30min</h3>
+                    </div>
+                    <div class="coffee-item">
+                        <div class="sprite-capuccino" onclick="selectTimer(60)"></div>
+                        <h3>1h</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="timer-container" style="display: none; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <div id="timer-animation" class="menu-titulo"></div>
+            <div id="timer-display" class="menu-titulo" style="font-size: 2rem;">00:00</div>
+            <div class="timer-controls">
+                <button id="btn-start-pause" onclick="startPause()" class="timer-btn btn-play"></button>
+                <button onclick="resetTimer()" class="timer-btn btn-reset"></button>
+                <button onclick="backToMenu()" class="timer-btn btn-back"></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

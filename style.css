@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+
+:root{
+    --brown-background: #8b5e3f;
+    --vanilla: #D7BDA6;
+} 
+
+body {
+    background-color: var(--brown-background);
+}
+
+main{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 380px;
+    height: 420px;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+}
+
+
+/* text style */
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    color: var(--vanilla);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: "Press Start 2P", system-ui;
+    color: var(--vanilla);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+}
+
+/* header */
+.header-container {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    -webkit-app-region: drag;
+}
+
+.header-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* header icons */
+
+#close-btn {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+#min-btn {
+    width: 39px;
+    height: 39px;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+/* start page icon*/
+.start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-direction: column;
+}
+
+#start-btn {
+    width: 130px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#start-btn:hover {
+    transform: scale(1.15);
+}
+
+/* menu page */
+
+.menu-titulo {
+    margin-top: 40px;
+    font-family: "Press Start 2P", system-ui;
+    color: var(--vanilla);
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+}
+
+/* menu page options*/
+
+.options-container {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 300px; 
+    gap: 10px;
+}
+
+.coffee-item {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* options animations */
+/* coffee beans animation*/
+.sprite-coffee-beans {
+    width: 120px; 
+    height: 120px; 
+    background-image: url('assets/coffee-beans.png');
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    animation: animationCoffeeBeans 1s steps(3) infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.sprite-coffee-beans:hover {
+    transform: scale(1.1);
+}
+
+@keyframes animationCoffeeBeans {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -360px 0; 
+    }
+}
+
+/* cup of coffee animation */
+.sprite-cup-coffee {
+    width: 120px; 
+    height: 120px; 
+    background-image: url('assets/cup-of-coffee.png');
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    animation: animationCupCoffee 1s steps(9) infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.sprite-cup-coffee:hover {
+    transform: scale(1.1);
+}
+
+@keyframes animationCupCoffee {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -1080px 0; 
+    }
+}
+
+/* capuccino animation */
+.sprite-capuccino {
+    width: 120px; 
+    height: 120px; 
+    background-image: url('assets/capuccino.png');
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    animation: animationCapuccino 1s steps(4) infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.sprite-capuccino:hover {
+    transform: scale(1.1);
+}
+
+@keyframes animationCapuccino {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -480px 0; 
+    }
+}
+
+.sprite-coffee-beans,
+.sprite-cup-coffee,
+.sprite-capuccino {
+  animation-play-state: paused;
+}
+
+#timer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+}
+
+
+/* timer buttons with images */
+.timer-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.timer-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+/* background images for buttons*/
+.btn-play {
+  background-image: url('assets/play.png');
+}
+
+.btn-pause {
+  background-image: url('assets/pause.png');
+}
+
+.btn-reset {
+  background-image: url('assets/reset.png');
+}
+
+.btn-back {
+  background-image: url('assets/back.png');
+  width: 90px;
+  height: 70px;
+}
