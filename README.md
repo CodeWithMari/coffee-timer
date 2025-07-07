@@ -47,9 +47,8 @@ Aplicativo desktop Pomodoro com tema de café, feito com **Electron.js**, **Java
 - Requer Node.js e npm instalados na máquina.
 
 ## 🌟 Prévia
-(Adicione uma imagem aqui se quiser mostrar o app rodando)
-Exemplo:
 
+![Gif Preview](assets/preview.gif)
 
 ## 💡 Inspiração
 
